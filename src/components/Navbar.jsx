@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import MusicPlayer from "../components/MusicPlayer";
-import DarkModeToggle from "./darkModeToggle";
+import DarkModeToggle from "./DarkModeToggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
