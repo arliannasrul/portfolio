@@ -117,9 +117,9 @@ export default function MusicPlayer() {
   };
 
   return (
-    <div className="fixed bottom-[6vh] left-0 right-0 lg:translate-y-[95vh] lg:hidden ">
+    <div className="fixed bottom-[6vh] left-0 right-0 lg:translate-y-[95vh] lg:hidden  ">
       {/* Player Controls */}
-      <div className="min-h-24 max-h-24 relative z-20 grid items-center grid-cols-6 gap-2 lg:bg-slate-200 lg:rounded-t-2xl transition-all duration-300  p-2 pr-4 border-y-1 lg:border-1 border-[#6497b1]">
+      <div className="min-h-24 max-h-24 relative z-20 grid items-center grid-cols-6 gap-2 lg:bg-slate-200 lg:rounded-t-2xl transition-all duration-300 border-y-2 p-2 pr-4  lg:border-1 border-[#6497b1]">
         <audio
           ref={audioRef}
           preload="none"
@@ -172,7 +172,7 @@ export default function MusicPlayer() {
       <div className="relative z-20 text-center bg-transparent  border-[#6497b1]">
         <button
           onClick={() => setShowPlaylist(!showPlaylist)}
-          className="w-3/4 px-4 py-2 text-sm border-b-1 rounded-b-2xl border-x-1 border-[#6497b1] text-gray-600 dark:text-gray-300 hover:text-[#6497b1] transition-all hover:bg-gray-50 dark:hover:bg-slate-800 active:scale-95 transform duration-300"
+          className="w-3/4 px-4  py-2 text-sm border-b-2 rounded-b-2xl border-x-2 border-[#6497b1] text-gray-600 dark:text-gray-300 hover:text-[#6497b1] transition-all hover:bg-gray-50 dark:hover:bg-slate-800 active:scale-95 transform duration-300"
         >
           {showPlaylist ? "Hide Playlist" : "Show Playlist"}
         </button>
@@ -180,7 +180,7 @@ export default function MusicPlayer() {
 
       {/* Playlist Panel */}
       <div
-        className={`relative z-10 border-b-1 border-[#6497b1] overflow-y-scroll transition-all duration-300 ease-in-out ${
+        className={`relative z-10 border-b-2 border-[#6497b1] overflow-y-scroll transition-all duration-300 ease-in-out ${
           showPlaylist ? "max-h-[25vh] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -195,12 +195,12 @@ export default function MusicPlayer() {
               onClick={() => handleSongSelect(index)}
               className={`w-full flex items-center p-2 rounded-lg transform transition-all duration-200 hover:scale-[0.99] ${
                 currentSongIndex === index
-                  ? "bg-blue-50 text-[#6497b1]"
+                  ? "bg-blue-50 text-[#6497b1] dark:text-slate-600 dark:bg-slate-700"
                   : "hover:bg-gray-50 dark:hover:bg-gray-800"
               }`}
             >
               <div className="flex-1 text-left">
-                <p className="text-sm">{song.title}</p>
+                <p className="text-sm text-black dark:text-white">{song.title}</p>
                 <p className="text-xs text-gray-500 dark:text-gray-300">{song.artist}</p>
               </div>
               {currentSongIndex === index && isPlaying && (

@@ -38,12 +38,12 @@ export default function Navbar() {
             ${
               isScrolled
                 ? "backdrop-blur-md bg-white/20 dark:bg-slate-800/20 shadow-lg"
-                : "bg-white/50 backdrop-blur-sm dark:bg-slate-600/20"
+                : "bg-white/50 backdrop-blur-xs dark:bg-slate-600/20"
             }  `}
         >
           
 
-          <div className="container px-4 lg:px-12 max-w-screen-xl mx-auto">
+          <div className="container px-4 lg:px-12 max-w-(--breakpoint-xl) mx-auto">
             <div className="flex items-center justify-between relative">
               {/* Logo dengan animasi dan efek hover */}
               <div className="px-4 py-2">
@@ -64,7 +64,7 @@ export default function Navbar() {
                   className=" top-0 px-4 py-2 block fixed right-4 lg:hidden 
                     hover:scale-105 transition-all duration-300 ease-in-out
                      rounded-lg hover:bg-gray-100/50
-                    z-[60] "
+                    z-60 "
                 >
                   <div
                     className={`w-[30px] h-[2px] my-2 block bg-[#6497B1] transition-all duration-300 ease-in-out origin-top-left
