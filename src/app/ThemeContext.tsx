@@ -31,6 +31,7 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
   return (
     <ThemeContext.Provider value={{ isDark, toggleTheme }}>
       <Navbar />
+      
       {children}
     </ThemeContext.Provider>
   );

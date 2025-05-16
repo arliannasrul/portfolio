@@ -2,7 +2,7 @@ export default function TimelineReExp () {
     return (
         <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
   <li>
-    <div className="timeline-middle">
+    <div className="timeline-middle dark:text-white text-black">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
@@ -18,11 +18,11 @@ export default function TimelineReExp () {
     </div>
     <div className="timeline-start text-start mb-10 md:text-end">
       
-      <h2 className=" lg:text-xl font-semibold">Universitas Merdeka Malang</h2>
+      <h2 className=" lg:text-xl font-semibold text-black dark:text-white">Universitas Merdeka Malang</h2>
       <div className="text-slate-600 dark:text-slate-400 ">Kerja Kelompok </div>
-      <div className="font-mono italic text-sm pb-3">2023 - Sekarang</div>
+      <div className="font-mono italic text-sm pb-3 text-slate-500">2023 - Sekarang</div>
      
-      <p className="">
+      <p className="text-slate-900 dark:text-slate-200">
     Berdiksusi dengan teman-teman tentang tugas yang diberikan dosen, dan mengerjakan tugas tersebut secara bersama-sama. Saya juga sering membantu teman-teman saya dalam mengerjakan tugas yang diberikan dosen, dan saya juga sering meminta bantuan kepada teman-teman saya jika saya mengalami kesulitan dalam mengerjakan tugas tersebut.
       </p>
     </div>
@@ -30,7 +30,7 @@ export default function TimelineReExp () {
   </li>
   <li>
     <hr className="bg-black dark:bg-white transition-colors duration-400"/>
-    <div className="timeline-middle">
+    <div className="timeline-middle dark:text-white text-black">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
@@ -45,11 +45,12 @@ export default function TimelineReExp () {
       </svg>
     </div>
     <div className="timeline-end text-start  md:mb-10">
-    <h2 className=" lg:text-xl font-semibold">Rumah</h2>
+    <h2 className=" lg:text-xl font-semibold text-black dark:text-white">Rumah</h2>
     <div className="text-slate-600 dark:text-slate-400">Turu</div>
-    <div className="font-mono italic text-sm pb-3">2003 - Sekarang</div>
-      
+    <div className="font-mono italic text-sm pb-3 text-slate-500">2003 - Sekarang</div>
+      <p className="text-slate-900 dark:text-slate-200">
      Turu membuat badan saya menjadi sehat dan bugar, karena tidur yang cukup sangat penting untuk kesehatan tubuh kita. Tidur yang cukup juga dapat meningkatkan konsentrasi dan daya ingat kita, sehingga kita dapat belajar dengan lebih baik. Selain itu, tidur yang cukup juga dapat meningkatkan mood kita, sehingga kita dapat beraktivitas dengan lebih baik.
+      </p>
     </div>
     <hr className="bg-black dark:bg-white transition-colors duration-400"/>
   </li>

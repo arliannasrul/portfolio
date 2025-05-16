@@ -5,12 +5,53 @@ import Lanyard from "@/components/Lanyard/Lanyard";
 import Magnet from "@/components/Magnet/Magnet";
 import LanyardDark from "@/components/Dark/Lanyard/LanyardDark";
 import BlurText from "@/components/BlurText/BlurText";
-
+import FadeContent from "@/animations/FadeContent/FadeContent";
 import TimelineTabs from "@/components/TimelineTabs";
+import AnimatedBeamDemo from "@/components/magicui/TechStack";
+import GridMotion from "@/components/GridMotion/GridMotion";
 
 
 
 export default function Home() {
+   const items = [
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
+
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
+
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
+   
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
+
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
+
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
+
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
+
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
+
+    // Add more items as needed
+  ];
   return (
     <>
       <section id="home" className="flex justify-center lg:px-18 bg-white dark:bg-slate-900 transition-colors pt-24 lg:pt-0">
@@ -267,7 +308,7 @@ export default function Home() {
                       <a
                         href="https://github.com/arliannasrul"
                         target="_blank"
-                        class="w-9 h-9 mr-3 rounded-full flex justify-center item-center border border-slate-300 hover:border-[#B3CDE0] hover:bg-[#6497B1] hover:text-white"
+                        className="w-9 h-9 mr-3 rounded-full flex justify-center item-center border border-slate-300 hover:border-[#B3CDE0] hover:bg-[#6497B1] hover:text-white"
                       >
                         <svg
                           role="img"
@@ -362,6 +403,49 @@ export default function Home() {
          
         </section>
 
+
+        <section
+          id="techstack"
+          className=" pt-16 pb-12 px-4 text-center bg-slate-200 dark:bg-slate-900 transition-colors"
+        >
+          <div className="pb-6">
+            <SplitText
+              text="Tech Stack"
+              className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[#6497B1] lg:px-7  font-semibold text-center "
+              delay={90}
+              animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+              animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+              easing="easeOutCubic"
+              threshold={0.2}
+              rootMargin="-50px"
+            />
+          </div>
+
+          <AnimatedBeamDemo />
+     
+          
+        </section>
+
+               <section id="portfolio" className="  pb-12  text-center bg-white dark:bg-slate-900">
+          <div className=""></div>
+          <div className="">
+            <GridMotion items={items} />
+          </div>
+          
+  
+<FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+  {/* Anything placed inside this container will be fade into view */}
+
+          <div className="flex justify-center pt-6">
+            <a
+              href="#projects"
+              className="px-6 py-2 text-[#6497B1] border-2 border-[#6497B1] rounded-lg hover:bg-[#6497B1] hover:text-white transition-all duration-300 font-medium"
+            >
+              See More
+            </a>
+          </div>
+          </FadeContent>
+        </section> 
     </>
   );
 }

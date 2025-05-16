@@ -18,7 +18,7 @@ export default function TimelineTabs() {
                 Related Experience
                 </button>
                 <button onClick={() => setActiveTab ("non-related experience")} className={`cursor-pointer px-4 py-2 rounded-r-2xl font-semibold transition-all duration-500 ease-in-out border-2 border-[#6497B1] ${activeTab === "non-related experience" ? "bg-[#6497B1] text-white" : " text-gray-700 dark:text-gray-300"}`}>
-                Non-Related Experience
+                Non Related Experience
                 </button>
             </div>
             <div className=" min-h-[700px] transition-all ">
