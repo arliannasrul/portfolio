@@ -54,7 +54,7 @@ export default function Home() {
   ];
   return (
     <>
-      <section id="home" className="flex justify-center lg:px-18 bg-white dark:bg-slate-900 transition-colors pt-24 lg:pt-0">
+      <section id="home" className="flex justify-center lg:px-18 bg-white dark:bg-slate-900 transition-colors pt-12 lg:pt-0">
           <div className="container">
             <div className="flex flex-wrap ">
               <div className=" w-full self-center px-4 lg:w-1/2 pt-26 lg:pt-0 pb-6 lg:pl-16">
