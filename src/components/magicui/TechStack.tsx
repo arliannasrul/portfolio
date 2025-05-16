@@ -94,11 +94,11 @@ export default function AnimatedBeamDemo() {
 
           <Circle ref={div11Ref} className={`${visible ? "opacity-100" : "opacity-0"} transition-opacity duration-2000  delay-400`}>
             <a
-              href="https://drive.google.com/file/d/1ztJYSgqox7As-2D3H5S2cFZFQ0-5ai1P/view?usp=sharing"
+              href="https://nextjs.org/"
               target="_blank"
-              className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0"
+              className=" text-gray-500 hover:text-black dark:hover:text-white active:grayscale-0 dark:text-gray-400"
             >
-              <Icons.python />
+              <Icons.next />
             </a>
           </Circle>
           <Circle ref={div5Ref} className={`${visible ? "opacity-100" : "opacity-0"} transition-opacity duration-2000  delay-600`}>
@@ -168,7 +168,7 @@ export default function AnimatedBeamDemo() {
             <a
               href="https://github.com/arliannasrul"
               target="_blank"
-              className="  hover:text-[#000000] "
+              className="   text-gray-500 hover:text-black dark:hover:text-white active:grayscale-0 dark:text-gray-400"
             >
               <Icons.github />
             </a>
