@@ -406,7 +406,7 @@ export default function Home() {
 
         <section
           id="techstack"
-          className=" pt-16 pb-12 px-4 text-center bg-slate-200 dark:bg-slate-900 transition-colors"
+          className=" pt-16 pb-12 px-4 text-center bg-white dark:bg-slate-900 transition-colors"
         >
           <div className="pb-6">
             <SplitText
