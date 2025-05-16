@@ -65,8 +65,8 @@ export default function AnimatedBeamDemo() {
     
       
     
-      <div className="flex size-full lg:h-[500px] h-[300px] max-h-[700px] max-w-4xl flex-col items-stretch justify-between gap-12">
-        <div className="flex flex-row items-center lg:justify-between justify-center gap-8 sm:gap-20 md:gap-34 lg:gap-40">
+      <div className="flex size-full lg:h-[500px] h-[300px] max-h-[700px] max-w-4xl flex-col items-stretch justify-between gap-12 ">
+        <div className="flex flex-row items-center lg:justify-between justify-center gap-12 sm:gap-20 md:gap-34 lg:gap-40">
    
   
   
@@ -96,7 +96,7 @@ export default function AnimatedBeamDemo() {
             <a
               href="https://nextjs.org/"
               target="_blank"
-              className=" text-gray-500 hover:text-black dark:hover:text-white active:grayscale-0 dark:text-gray-400"
+              className=" lg:text-gray-500  hover:text-black dark:hover:text-white active:grayscale-0 lg:dark:text-gray-400"
             >
               <Icons.next />
             </a>
@@ -111,7 +111,7 @@ export default function AnimatedBeamDemo() {
             </a>
           </Circle>
         </div>
-        <div className="flex flex-row items-center lg:justify-between justify-center gap-20 sm:gap-37 md:gap-57 lg:gap-64">
+        <div className="flex flex-row items-center lg:justify-between justify-center gap-25 sm:gap-37 md:gap-57 lg:gap-64">
           <Circle ref={div2Ref} className={`${visible ? "opacity-100" : "opacity-0"} transition-opacity duration-2000  delay-800`}>
             <a
               href="https://tailwindcss.com/"
@@ -136,7 +136,7 @@ export default function AnimatedBeamDemo() {
             </a>
           </Circle>
         </div>
-        <div className="flex flex-row  items-center lg:justify-between justify-center gap-8 sm:gap-20 md:gap-34 lg:gap-40">
+        <div className="flex flex-row  items-center lg:justify-between justify-center gap-13 sm:gap-20 md:gap-34 lg:gap-40">
           <Circle ref={div3Ref} className={`${visible ? "opacity-100" : "opacity-0"} transition-opacity duration-2000  delay-1200`}>
             <a
               href="https://astro.build/"
@@ -168,7 +168,7 @@ export default function AnimatedBeamDemo() {
             <a
               href="https://github.com/arliannasrul"
               target="_blank"
-              className="   text-gray-500 hover:text-black dark:hover:text-white active:grayscale-0 dark:text-gray-400"
+              className="dark:text-white lg:text-gray-500 hover:text-black dark:hover:text-white active:grayscale-0 lg:dark:text-gray-400"
             >
               <Icons.github />
             </a>
