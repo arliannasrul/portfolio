@@ -77,6 +77,7 @@ export default function Home() {
                       rootMargin="-50px"
                     />
                   </div> 
+                  
                   <br></br>
                   <div className="pb-1 lg:pb-2">
                     <SplitText
@@ -446,6 +447,18 @@ export default function Home() {
           </div>
           </FadeContent>
         </section> 
+
+        <section id= "random" className="pb-24 pt-24 text-center bg-slate-950 transition-colors">
+          <div className="display lg:flex  items-center justify-center">
+            <div align="center">
+              <img src="https://spotify-recently-played-readme.vercel.app/api?user=31ihraqmz6nkhcxhlgzl5hpigwoy&unique={true|12|on|yes}" alt="Spotify" />
+            </div>
+            <div align="center" className="pl-12">
+<img src="https://raw.githubusercontent.com/arliannasrul/arliannasrul/output/snake.svg" alt="Snake animation" />
+</div>
+
+          </div>
+        </section>
     </>
   );
 }
