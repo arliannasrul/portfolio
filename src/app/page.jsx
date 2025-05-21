@@ -453,14 +453,14 @@ export default function Home() {
             <div align="center">
               <img src="https://spotify-recently-played-readme.vercel.app/api?user=31ihraqmz6nkhcxhlgzl5hpigwoy&unique={true|12|on|yes}" alt="Spotify" />
             </div>
-            <div align="center" className="pl-12">
+            <div align="center" className="pl-12 pt-12 lg:pt-0">
 <img src="https://raw.githubusercontent.com/arliannasrul/arliannasrul/output/snake.svg" alt="Snake animation" />
 </div>
 
           </div>
         </section>
 
-       <footer className="bg-gray-900 pt-24 pb-7">
+       <footer className="bg-gray-900 pt-14 pb-4">
   <div className="container mx-auto">
     <div className="flex flex-wrap lg:pl-20 xl:pl-32 2xl:pl-72">
       
@@ -521,7 +521,7 @@ export default function Home() {
     </div>
 
     {/* Footer Bottom */}
-    <div className="w-full pt-6 border-t border-slate-700">
+    <div className="w-full pt-4 border-t border-slate-700">
       <p className="font-medium text-xs text-slate-500 text-center">
         Dibuat dengan <span className="text-pink-500">❤</span> oleh{' '}
         <a
