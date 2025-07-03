@@ -164,7 +164,8 @@ export default function Home() {
                 >
                   <a
                     className="flex mt-2 lg:mt-2 "
-                    href="https://docs.google.com/document/d/12aV7gNu7xec1ggA0ST0ZuRgXP4l-YyqYmqT4q6fcEIM/export?format=pdf"
+                    href="https://drive.google.com/file/d/1hYOROk6w20YzsAnW7qDzRER-rlAShkrS/view?usp=sharing"
+                    target="_blank"
                   >
                     <Magnet padding={50} disabled={false} magnetStrength={2}>
                       <button className="active:scale-80 transition-all cursor-pointer">
@@ -534,7 +535,7 @@ export default function Home() {
         </a>
         , Menggunakan{' '}
         <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer" className="font-bold">
-          NEXT JS
+          Next Js
         </a>
       </p>
     </div>
