@@ -1,17 +1,18 @@
 // src/components/PortfolioList.jsx
-"use client"; // Komponen ini menggunakan fitur sisi klien.
+"use client";
 
 import React from 'react';
 import SplitText from '@/components/SplitText/SplitText';
-import FadeContent from '@/animations/FadeContent/FadeContent'; // Pastikan path ini benar
-import portfolioItems from '../assets/data/portfolioItems.js'; // Sesuaikan path jika diperlukan
+import FadeContent from '@/animations/FadeContent/FadeContent';
+import portfolioItems from '../assets/data/portfolioItems.js';
+import Icons from '@/assets/data/Icons.jsx'; // Impor komponen Icons
 
 export default function PortfolioList() {
   return (
     <section id="portfolio" className="py-12 text-center bg-white dark:bg-slate-900 transition-colors pt-24">
       <div className="pb-6">
         <SplitText
-          text="Proyek Saya" // Mengubah judul menjadi 'Proyek Saya'
+          text="Proyek Saya"
           className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[#6497B1] lg:px-7 font-semibold text-center "
           delay={90}
           animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
@@ -40,9 +41,19 @@ export default function PortfolioList() {
                   <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2 group-hover:text-[#6497B1] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
                     {item.description}
                   </p>
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {item.techStack && item.techStack.map((tech, index) => {
+                      const IconComponent = Icons[tech]; // Dapatkan komponen ikon dari objek Icons
+                      return IconComponent ? (
+                        <div key={index} className="flex-shrink-0">
+                          <IconComponent />
+                        </div>
+                      ) : null;
+                    })}
+                  </div>
                 </div>
               </a>
             </FadeContent>
@@ -53,7 +64,7 @@ export default function PortfolioList() {
       <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
         <div className="flex justify-center pt-12">
           <a
-            href="https://github.com/arliannasrul?tab=repositories" // Tautan ke repositori GitHub Anda
+            href="https://github.com/arliannasrul?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-2 text-[#6497B1] border-2 border-[#6497B1] rounded-lg hover:bg-[#6497B1] hover:text-white transition-all duration-300 font-medium"
