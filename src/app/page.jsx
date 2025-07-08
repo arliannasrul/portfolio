@@ -9,44 +9,45 @@ import FadeContent from "@/animations/FadeContent/FadeContent";
 import TimelineTabs from "@/components/TimelineTabs";
 import AnimatedBeamDemo from "@/components/magicui/TechStack";
 import GridMotion from "@/components/GridMotion/GridMotion";
+import Link from "next/link";
 
 
 
 export default function Home() {
    const items = [
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1751977214/Screenshot_310_pe9dud.png",
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
 
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1751978601/Screenshot_311_j0tpac.png",
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
 
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1751977214/Screenshot_310_pe9dud.png",
    
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
 
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1751977214/Screenshot_310_pe9dud.png",
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
 
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1751978601/Screenshot_311_j0tpac.png",
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
 
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1751977214/Screenshot_310_pe9dud.png",
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
 
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1751978601/Screenshot_311_j0tpac.png",
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
 
@@ -439,12 +440,12 @@ export default function Home() {
   {/* Anything placed inside this container will be fade into view */}
 
           <div className="flex justify-center pt-6">
-            <a
-              href="#projects"
+            <Link 
+              href="/portfolio"
               className="px-6 py-2 text-[#6497B1] border-2 border-[#6497B1] rounded-lg hover:bg-[#6497B1] hover:text-white transition-all duration-300 font-medium"
             >
               See More
-            </a>
+            </Link>
           </div>
           </FadeContent>
         </section> 

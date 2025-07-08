@@ -2,10 +2,14 @@
 import { useState, useEffect } from "react";
 import MusicPlayer from "../components/MusicPlayer";
 import DarkModeToggle from "./DarkModeToggle";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+const isOnHomepage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,33 +99,45 @@ export default function Navbar() {
                     lg:flex lg:items-center`}
                   >
                   
-                    <ul className=" flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:space-x-8  ">
-                      {[
-                        { href: "#home", text: "Home" },
-                        { href: "#techstack", text: "Tech Stack" },
-                        { href: "#timeline", text: "Experience" },
-                        { href: "#portfolio", text: "Portfolio" },
-                        { href: "#contact", text: "Contact" },
-                      ].map((item) => (
-                        <li key={item.href} className="group">
-                          <a
-                            href={item.href}
-                            className="  text-lg lg:text-xl text-gray-700 dark:text-slate-200
-                            relative overflow-hidden block
-                            hover:text-[#6497B1] t duration-300
-                            py-2 px-4 rounded-lg 
-                            group-hover:scale-105 transform transition-all"
-                          >
-                            {item.text}
-                            <span
-                              className="absolute bottom-0 left-0 w-full h-0.5 
-                            bg-[#6497B1] transform scale-x-0 group-hover:scale-x-100 
-                            transition-transform duration-300"
-                            />
-                          </a>
-                          
-                        </li>
-                      ))}
+<ul className="flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:space-x-8">
+  {[
+    { href: "#home", text: "Home" },
+    { href: "#techstack", text: "Tech Stack" },
+    { href: "#timeline", text: "Experience" },
+    { href: "/portfolio", text: "Portfolio" }, // ← perhatikan ini
+    { href: "#contact", text: "Contact" },
+  ].map((item) => {
+    // Khusus item "Portfolio", langsung ke /portfolio tanpa #
+    const isPortfolio = item.text === "Portfolio";
+    const linkHref = isPortfolio
+      ? "/portfolio"
+      : pathname === "/"
+      ? item.href
+      : `/${item.href}`;
+
+    return (
+      <li key={item.text} className="group">
+        <Link
+          href={linkHref}
+          scroll={true}
+          onClick={() => setIsOpen(false)}
+          className="text-lg lg:text-xl text-gray-700 dark:text-slate-200
+                    relative overflow-hidden block
+                    hover:text-[#6497B1] duration-300
+                    py-2 px-4 rounded-lg 
+                    group-hover:scale-105 transform transition-all"
+        >
+          {item.text}
+          <span
+            className="absolute bottom-0 left-0 w-full h-0.5 
+                    bg-[#6497B1] transform scale-x-0 group-hover:scale-x-100 
+                    transition-transform duration-300"
+          />
+        </Link>
+      </li>
+    );
+  })}
+
                        <div className="pb-6 pl-4">
                         <DarkModeToggle />
                       </div>
