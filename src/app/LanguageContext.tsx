@@ -19,11 +19,11 @@ export const LanguageContext = createContext<LanguageContextProps>({
 const translations: Record<'id' | 'en', Record<string, string>> = {
   id: {
     // Navbar
-    'Home': 'Home',
-    'Tech Stack': 'Tech Stack',
-    'Experience': 'Experience',
-    'Portfolio': 'Portfolio',
-    'Contact': 'Contact',
+    'Home': 'Beranda',
+    'Tech Stack': 'Keahlian',
+    'Experience': 'Pengalaman',
+    'Portfolio': 'Portofolio',
+    'Contact': 'Kontak',
 
     // Page.jsx - Intro
     'About Gw': 'Tentang Saya',
