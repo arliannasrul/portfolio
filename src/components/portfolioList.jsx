@@ -4,15 +4,18 @@
 import React from 'react';
 import SplitText from '@/components/SplitText/SplitText';
 import FadeContent from '@/animations/FadeContent/FadeContent';
+import { useLanguage } from '../app/LanguageContext';
 import portfolioItems from '../assets/data/portfolioItems.js';
 import Icons from '@/assets/data/Icons.jsx'; // Impor komponen Icons
 
 export default function PortfolioList() {
+  const { lang, t } = useLanguage();
+
   return (
     <section id="portfolio" className="py-12 text-center bg-white dark:bg-slate-900 transition-colors pt-24">
       <div className="pb-6">
         <SplitText
-          text="Proyek Saya"
+          text={t('Proyek Saya')}
           className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[#6497B1] lg:px-7 font-semibold text-center "
           delay={90}
           animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
@@ -39,10 +42,10 @@ export default function PortfolioList() {
                 ></div>
                 <div className="p-4">
                   <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2 group-hover:text-[#6497B1] transition-colors">
-                    {item.title}
+                    {item.title[lang] || item.title.id}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                    {item.description}
+                    {item.description[lang] || item.description.id}
                   </p>
                   <div className="flex flex-wrap justify-center gap-2">
                     {item.techStack && item.techStack.map((tech, index) => {
@@ -69,7 +72,7 @@ export default function PortfolioList() {
             rel="noopener noreferrer"
             className="px-6 py-2 text-[#6497B1] border-2 border-[#6497B1] rounded-lg hover:bg-[#6497B1] hover:text-white transition-all duration-300 font-medium"
           >
-            Lihat Lebih Banyak di GitHub
+            {t('Lihat Lebih Banyak di GitHub')}
           </a>
         </div>
       </FadeContent>

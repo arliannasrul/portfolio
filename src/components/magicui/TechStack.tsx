@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "./AnimatedBeam";
 import Icons from "../../assets/data/Icons";
 import { useInView } from "framer-motion";
+import { useLanguage } from "../../app/LanguageContext";
 
 
 const Circle = forwardRef<
@@ -29,6 +30,7 @@ Circle.displayName = "Circle";
 
 
 export default function AnimatedBeamDemo() {
+  const { t } = useLanguage();
   const containerRef = useRef<HTMLDivElement>(null);
   const div1Ref = useRef<HTMLDivElement>(null);
   const div2Ref = useRef<HTMLDivElement>(null);
@@ -123,7 +125,7 @@ export default function AnimatedBeamDemo() {
           </Circle>
           <Circle ref={div4Ref} className="scale-150 rounded-xl">
             <h2 className="text-[7px] lg:text-[11px] font-semibold text-center">
-              Website Development
+              {t("Website Development")}
             </h2>
           </Circle>
           <Circle ref={div6Ref} className={`${visible ? "opacity-100" : "opacity-0"} transition-opacity duration-2000  delay-1000`}>

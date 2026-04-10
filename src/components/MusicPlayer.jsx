@@ -1,8 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import { Play, Pause, Music, SkipBack, SkipForward } from "lucide-react";
 import songs from "../assets/data/songs.js";
+import { useLanguage } from "../app/LanguageContext";
 
 export default function MusicPlayer() {
+  const { t } = useLanguage();
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -38,7 +40,7 @@ export default function MusicPlayer() {
         }
       } catch (err) {
         console.error("Error loading/playing audio:", err);
-        alert(`Gagal memuat lagu: ${songs[currentSongIndex].title}`);
+        alert(`${t('Gagal memuat lagu:')} ${songs[currentSongIndex].title}`);
         setIsPlaying(false);
       }
     };
@@ -174,7 +176,7 @@ export default function MusicPlayer() {
           onClick={() => setShowPlaylist(!showPlaylist)}
           className="w-3/4 px-4  py-2 text-sm border-b-2 rounded-b-2xl border-x-2 border-[#6497b1] text-gray-600 dark:text-gray-300 hover:text-[#6497b1] transition-all hover:bg-gray-50 dark:hover:bg-slate-800 active:scale-95 transform duration-300"
         >
-          {showPlaylist ? "Hide Playlist" : "Show Playlist"}
+          {showPlaylist ? t("Sembunyikan Playlist") : t("Tampilkan Playlist")}
         </button>
       </div>
 

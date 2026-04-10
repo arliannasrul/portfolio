@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import MusicPlayer from "../components/MusicPlayer";
 import DarkModeToggle from "./DarkModeToggle";
+import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "../app/LanguageContext";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -9,7 +11,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
-const isOnHomepage = pathname === "/";
+  const isOnHomepage = pathname === "/";
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -127,7 +130,7 @@ const isOnHomepage = pathname === "/";
                     py-2 px-4 rounded-lg 
                     group-hover:scale-105 transform transition-all"
         >
-          {item.text}
+          {t(item.text)}
           <span
             className="absolute bottom-0 left-0 w-full h-0.5 
                     bg-[#6497B1] transform scale-x-0 group-hover:scale-x-100 
@@ -138,8 +141,9 @@ const isOnHomepage = pathname === "/";
     );
   })}
 
-                       <div className="pb-6 pl-4">
+                       <div className="pb-6 pl-4 flex gap-4 mt-2 lg:mt-0 items-center">
                         <DarkModeToggle />
+                        <LanguageToggle />
                       </div>
                      
                       

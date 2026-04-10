@@ -1,4 +1,7 @@
+import { useLanguage } from "../../app/LanguageContext";
+
 export default function TimelineEdu () {
+    const { t } = useLanguage();
     return (
         <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
   <li>
@@ -18,12 +21,12 @@ export default function TimelineEdu () {
     </div>
     <div className="timeline-start text-start mb-10 md:text-end">
       
-      <h2 className=" lg:text-xl font-semibold text-black dark:text-white ">Universitas Merdeka Malang</h2>
-      <div className="text-slate-600 dark:text-slate-400 ">S1 - Sistem Informasi</div>
-      <div className="font-mono italic text-sm pb-3 text-slate-500">2023 - Sekarang</div>
+      <h2 className=" lg:text-xl font-semibold text-black dark:text-white ">{t('Universitas Merdeka Malang')}</h2>
+      <div className="text-slate-600 dark:text-slate-400 ">{t('S1 - Sistem Informasi')}</div>
+      <div className="font-mono italic text-sm pb-3 text-slate-500">{t('2023 - Sekarang')}</div>
      
       <p className="text-slate-900 dark:text-slate-200">
-    Mempelajari Analisis Sistem, Rekayasa Perangkat Lunak, Sistem Database, Algoritma dan Struktur Data, Pemrograman Website dan lain-lain. Disini saya berfokus pada pengembangan website baik front-end maupun back-end dengan IPK saat ini 3.88
+    {t('edu.univ.desc')}
       </p>
     </div>
     <hr className="bg-black dark:bg-white transition-colors duration-400"/>
@@ -45,11 +48,11 @@ export default function TimelineEdu () {
       </svg>
     </div>
     <div className="timeline-end text-start  md:mb-10">
-    <h2 className=" lg:text-xl font-semibold text-black dark:text-white">SMK Negeri 4 Malang</h2>
-    <div className="text-slate-600 dark:text-slate-400 ">Multimedia</div>
-    <div className="font-mono italic text-sm pb-3 text-slate-500">2019 - 2023</div>
+    <h2 className=" lg:text-xl font-semibold text-black dark:text-white">{t('SMK Negeri 4 Malang')}</h2>
+    <div className="text-slate-600 dark:text-slate-400 ">{t('Multimedia')}</div>
+    <div className="font-mono italic text-sm pb-3 text-slate-500">{t('2019 - 2023')}</div>
     <p className="text-slate-900 dark:text-slate-200">
-     Mempelajari tentang multimedia, seperti desain grafis, video editing, UI/UX dan animasi 2D. Disini saya belajar banyak tentang dunia multimedia, dan saya juga belajar untuk bekerja sama dengan tim dalam membuat konten yang berkualitas. Saya juga belajar untuk berkomunikasi dengan baik kepada atasan dan rekan kerja, serta belajar untuk mengatur waktu dengan baik dalam menyelesaikan tugas yang diberikan.
+     {t('edu.smk.desc')}
     </p>
     </div>
     <hr className="bg-black dark:bg-white transition-colors duration-400"/>

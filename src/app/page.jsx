@@ -1,3 +1,5 @@
+"use client";
+import { useLanguage } from "./LanguageContext";
 import AnimatedContent from "@/components/AnimatedContent/AnimatedContent";
 import SplitText from "@/components/SplitText/SplitText";
 import RotatingText from "@/components/RotatingText/RotatingText";
@@ -14,6 +16,7 @@ import Link from "next/link";
 
 
 export default function Home() {
+   const { t } = useLanguage();
    const items = [
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1751977214/Screenshot_310_pe9dud.png",
@@ -112,7 +115,7 @@ export default function Home() {
                     >
                       <h1 className=" text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-slate-500 dark:text-slate-400 transition-all font-semibold ">
                         {" "}
-                        I'm a
+                        {t('I\'m a')}
                       </h1>
                     </AnimatedContent>
 
@@ -128,10 +131,10 @@ export default function Home() {
                     >
                       <RotatingText
                         texts={[
-                          "Information Systems Student",
-                          "Web Developer",
-                          "Tech Enthusiast",
-                          "Gamer",
+                          t("Mahasiswa Sistem Informasi"),
+                          t("Web Developer"),
+                          t("Tech Enthusiast"),
+                          t("Gamer"),
                         ]}
                         mainClassName=" min-w-[55px] max-w-[500px]  text-slate-700 dark:text-slate-500 overflow-hidden  flex text-center justify-center rounded-lg text-lg lg:text-xl xl:text-2xl 2xl:text-3xl  inline-block transition-all"
                         staggerFrom={"last"}
@@ -171,7 +174,7 @@ export default function Home() {
                     <Magnet padding={50} disabled={false} magnetStrength={2}>
                       <button className="active:scale-80 transition-all cursor-pointer">
                         <div className="  text-sm border-2 lg:text-lg   border-[#6497B1] p-2 rounded-3xl text-slate-500 dark:text-slate-300 font-semibold pointer-events-auto hover:bg-[#6497B1] hover:text-white transition">
-                          Download Resume
+                          {t('Download Resume')}
                         </div>
                       </button>
                     </Magnet>
@@ -196,7 +199,7 @@ export default function Home() {
               <div className="w-full  mb-10 lg:w-[75%] ">
                 <div className="pb-2 ">
                   <SplitText
-                    text="About Gw"
+                    text={t('About Gw')}
                     className="text-xl lg:text-2xl xl:text-3xl  text-[#6497B1] font-semibold text-center  "
                     delay={90}
                     animationFrom={{
@@ -213,7 +216,7 @@ export default function Home() {
                   />
                 </div>
                 <BlurText
-                  text="Halo perkenalkan aku Nasrul, seorang mahasiswa aktif semester 4 di perguruan tinggi swasta di Malang. Di kampus ini aku mengambil program studi S1 Sistem Infomasi. Selain mengoding, aku juga hobi bermain game, mendengarkan musik dan menjelajahi alam. Aku memilih program studi Sistem Informasi ini dikarenakan aku suka dengan hal-hal yang berbau dengan teknologi dan aku yakin jurusan IT atau teknologi sangat dibutuhkan di masa depan."
+                  text={t('intro.desc')}
                   delay={50}
                   animateBy="words"
                   direction="top"
@@ -223,7 +226,7 @@ export default function Home() {
 
               <div className="w-full  mb-12 lg:w-[25%]  lg:pl-10 lg:border-l-2 border-[#6497B1]">
                 <SplitText
-                  text="Get in Touch!"
+                  text={t('Get in Touch!')}
                   className="text-xl lg:text-2xl xl:text-3xl  text-[#6497B1]     font-semibold text-center "
                   delay={90}
                   animationFrom={{
@@ -247,7 +250,7 @@ export default function Home() {
                 >
                   <div className=" text-sm lg:text-lg xl:text-xl text-black dark:text-white ">
                     <p className="font-poppins  pt-5 pb-6 max-w-xl  ">
-                      Mari berteman denganku.
+                      {t('Let\'s be friends.')}
                     </p>
 
                     <div className="flex items-center">
@@ -376,7 +379,7 @@ export default function Home() {
           <div>
             <div className="pb-6">
             <SplitText
-              text="Education & Experience"
+              text={t('Pengalaman')}
               className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[#6497B1] lg:px-7  font-semibold text-center "
               delay={90}
               animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
@@ -444,7 +447,7 @@ export default function Home() {
               href="/portfolio"
               className="px-6 py-2 text-[#6497B1] border-2 border-[#6497B1] rounded-lg hover:bg-[#6497B1] hover:text-white transition-all duration-300 font-medium"
             >
-              See More
+              {t('Lihat Lebih Banyak')}
             </Link>
           </div>
           </FadeContent>
@@ -468,26 +471,26 @@ export default function Home() {
       
       {/* Kontak */}
       <div className="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
-        <h3 className="font-bold text-2xl mb-2 text-white">Hubungi Saya</h3>
+        <h3 className="font-bold text-2xl mb-2 text-white">{t('Hubungi Saya')}</h3>
         <p>arliannasrul@gmail.com</p>
-        <p>Kota Malang, Jawa Timur</p>
+        <p>{t('Kota Malang, Jawa Timur')}</p>
       </div>
       
       {/* Kategori */}
       <div className="w-full px-4 mb-12 md:w-1/3 lg:pl-20">
-        <h3 className="font-semibold text-xl text-white mb-3">Kategori</h3>
+        <h3 className="font-semibold text-xl text-white mb-3">{t('Kategori')}</h3>
         <ul className="text-slate-300 space-y-3">
-          <li><a href="#home" className="inline-block text-base hover:text-[#6497B1]">Beranda</a></li>
-          <li><a href="#about" className="inline-block text-base hover:text-[#6497B1]">Tentang Saya</a></li>
-          <li><a href="#portfolio" className="inline-block text-base hover:text-[#6497B1]">Portofolio</a></li>
-          <li><a href="#skills" className="inline-block text-base hover:text-[#6497B1]">Keahlian</a></li>
-          <li><a href="#contact" className="inline-block text-base hover:text-[#6497B1]">Kontak</a></li>
+          <li><a href="#home" className="inline-block text-base hover:text-[#6497B1]">{t('Beranda')}</a></li>
+          <li><a href="#about" className="inline-block text-base hover:text-[#6497B1]">{t('Tentang Saya')}</a></li>
+          <li><a href="#portfolio" className="inline-block text-base hover:text-[#6497B1]">{t('Portofolio')}</a></li>
+          <li><a href="#skills" className="inline-block text-base hover:text-[#6497B1]">{t('Keahlian')}</a></li>
+          <li><a href="#contact" className="inline-block text-base hover:text-[#6497B1]">{t('Kontak')}</a></li>
         </ul>
       </div>
       
       {/* Sosial Media */}
       <div className="w-full px-4 mb-12 md:w-1/3">
-        <h3 className="font-semibold text-xl text-white mb-3">Sosial Media</h3>
+        <h3 className="font-semibold text-xl text-white mb-3">{t('Sosial Media')}</h3>
         
         <ul className="flex text-slate-300 space-x-2 mb-2">
           {/* Instagram */}
@@ -525,7 +528,7 @@ export default function Home() {
     {/* Footer Bottom */}
     <div className="w-full pt-4 border-t border-slate-700">
       <p className="font-medium text-xs text-slate-500 text-center">
-        Dibuat dengan <span className="text-pink-500">❤</span> oleh{' '}
+        {t('Dibuat dengan')} <span className="text-pink-500">❤</span> {t('oleh')}{' '}
         <a
           href="https://www.instagram.com/arliannasrul/"
           target="_blank"
@@ -534,7 +537,7 @@ export default function Home() {
         >
           Nasrul
         </a>
-        , Menggunakan{' '}
+        , {t('Menggunakan')}{' '}
         <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer" className="font-bold">
           Next Js
         </a>
