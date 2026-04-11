@@ -4,6 +4,7 @@ import "./globals.css";
 
 import ThemeProvider from './ThemeContext';  // Client component
 import LanguageProvider from './LanguageContext';
+import ChatAssistant from '../components/ChatAssistant';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,11 +31,12 @@ export default function RootLayout({
     <html lang="en">
       
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
       <LanguageProvider>
         <ThemeProvider>
           {children}
+          <ChatAssistant />
         </ThemeProvider>
       </LanguageProvider>
       </body>
