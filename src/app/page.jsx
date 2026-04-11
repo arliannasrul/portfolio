@@ -168,7 +168,7 @@ export default function Home() {
                 >
                   <a
                     className="flex mt-2 lg:mt-2 "
-                    href="https://drive.google.com/file/d/1hYOROk6w20YzsAnW7qDzRER-rlAShkrS/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1XjOxSC69KsTTB_SmNEYwO09QM397Ckz-/view?usp=sharing"
                     target="_blank"
                   >
                     <Magnet padding={50} disabled={false} magnetStrength={2}>
