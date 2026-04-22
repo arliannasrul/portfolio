@@ -2,115 +2,52 @@
 const portfolioItems = [
   {
     id: 1,
-    title: { id: "Aplikasi Catatan", en: "Notes App" },
-    description: { id: "Aplikasi pencatat sederhana yang dibuat dengan teknologi web modern.", en: "A simple note-taking application built with modern web technologies." },
-    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
-    link: "https://github.com/arliannasrul/catatan-belanjaku",
-    techStack: ["react", "html", "css", "tailwind"],
+    title: { id: "Toko Online (Buyer & Admin)", en: "Online Store (Buyer & Admin)" },
+    description: { 
+      id: "Platform e-commerce lengkap dengan fitur dual-role untuk pembeli (belanja) dan admin (manajemen inventori/pesanan).", 
+      en: "A complete e-commerce platform with dual-role features for buyers (shopping) and admins (inventory/order management)." 
+    },
+    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864915/Screenshot_2026-04-22_191734_gorsxp.png",
+    screenshots: [
+      "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864913/Screenshot_2026-04-22_192229_mmpaul.png",
+      "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864915/Screenshot_2026-04-22_191734_gorsxp.png"
+    ],
+    demo: "https://toko-admin-five.vercel.app/", // Update this link if necessary
+    github: "https://github.com/arliannasrul/toko-admin", 
+    techStack: ["html", "css", "react", "tailwind", "next", "googleCloud", "gemini"],
   },
   {
     id: 2,
-    title: { id: "Toko online Admin Panel", en: "Online Store Admin Panel" },
-    description: { id: "Panel Toko admin mengelola produk toko online dengan fitur CRUD.", en: "Admin panel to manage online store products with CRUD features." },
-    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1751977214/Screenshot_310_pe9dud.png",
-    link: "https://toko-admin-beta.vercel.app/",
-    techStack: ["react", "next", "tailwind"],
+    title: { id: "Website KKN", en: "KKN Website" },
+    description: { 
+      id: "Website informasi dan dokumentasi untuk program Kuliah Kerja Nyata (KKN) mahasiswa.", 
+      en: "Information and documentation website for the student community service program (KKN)." 
+    },
+    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864919/Screenshot_2026-04-22_203414_n08jbk.png",
+    screenshots: [
+      "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864919/Screenshot_2026-04-22_203414_n08jbk.png",
+      "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864921/Screenshot_2026-04-22_203254_hbudrm.png"
+    ],
+    demo: "https://kkn-kelompok5-desapandanrejo.vercel.app/",
+    github: "https://github.com/arliannasrul/kkn-kelompok5-desapandanrejo",
+    techStack: ["html", "css", "react", "tailwind", "next"],
   },
   {
     id: 3,
-    title: { id: "Game Tic Tac Toe", en: "Tic Tac Toe Game" },
-    description: { id: "Game Tic Tac Toe yang interaktif dan menyenangkan diimplementasikan dalam JavaScript.", en: "An interactive and fun Tic Tac Toe game implemented in JavaScript." },
-    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
-    link: "https://github.com/arliannasrul/tictactoe-game",
-    techStack: ["react", "html", "css"],
-  },
-  {
-    id: 4,
-    title: { id: "Aplikasi AnimeKu", en: "AnimeKu App" },
-    description: { id: "Aplikasi web untuk menjelajahi dan menemukan berbagai seri anime.", en: "A web application to explore and discover various anime series." },
-    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
-    link: "https://github.com/arliannasrul/animeku-app",
-    techStack: ["react", "html", "css", "tailwind", "vite"],
-  },
-  {
-    id: 5,
-    title: { id: "Proyek Lain A", en: "Other Project A" },
-    description: { id: "Deskripsi singkat proyek A.", en: "Brief description of project A." },
-    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
-    link: "https://example.com/proyek-a",
-    techStack: ["html", "css"],
-  },
-  {
-    id: 6,
-    title: { id: "Proyek Lain B", en: "Other Project B" },
-    description: { id: "Deskripsi singkat proyek B.", en: "Brief description of project B." },
-    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
-    link: "https://example.com/proyek-b",
-    techStack: ["react", "vite"],
-  },
-  {
-    id: 7,
-    title: { id: "Proyek Lain C", en: "Other Project C" },
-    description: { id: "Deskripsi singkat proyek C.", en: "Brief description of project C." },
-    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
-    link: "https://example.com/proyek-c",
-    techStack: ["javascript", "git"],
-  },
-  {
-    id: 8,
-    title: { id: "Proyek Lain D", en: "Other Project D" },
-    description: { id: "Deskripsi singkat proyek D.", en: "Brief description of project D." },
-    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
-    link: "https://example.com/proyek-d",
-    techStack: ["next", "tailwind"],
-  },
-  {
-    id: 9,
-    title: { id: "Proyek Lain E", en: "Other Project E" },
-    description: { id: "Deskripsi singkat proyek E.", en: "Brief description of project E." },
-    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
-    link: "https://example.com/proyek-e",
-    techStack: ["html", "css", "react"],
-  },
-  {
-    id: 10,
-    title: { id: "Proyek Lain F", en: "Other Project F" },
-    description: { id: "Deskripsi singkat proyek F.", en: "Brief description of project F." },
-    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
-    link: "https://example.com/proyek-f",
-    techStack: ["javascript", "python"],
-  },
-  {
-    id: 11,
-    title: { id: "Proyek Lain G", en: "Other Project G" },
-    description: { id: "Deskripsi singkat proyek G.", en: "Brief description of project G." },
-    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
-    link: "https://example.com/proyek-g",
-    techStack: ["astro", "tailwind"],
-  },
-  {
-    id: 12,
-    title: { id: "Proyek Lain H", en: "Other Project H" },
-    description: { id: "Deskripsi singkat proyek H.", en: "Brief description of project H." },
-    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
-    link: "https://example.com/proyek-h",
-    techStack: ["react", "git", "github"],
-  },
-  {
-    id: 13,
-    title: { id: "Proyek Lain I", en: "Other Project I" },
-    description: { id: "Deskripsi singkat proyek I.", en: "Brief description of project I." },
-    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
-    link: "https://example.com/proyek-i",
-    techStack: ["html", "css", "javascript"],
-  },
-  {
-    id: 14,
-    title: { id: "Proyek Lain J", en: "Other Project J" },
-    description: { id: "Deskripsi singkat proyek J.", en: "Brief description of project J." },
-    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
-    link: "https://example.com/proyek-j",
-    techStack: ["next", "react"],
+    title: { id: "Smart Receipt Hub AI", en: "Smart Receipt Hub AI" },
+    description: { 
+      id: "Aplikasi manajemen struk pintar dengan fitur AI (Gemini) untuk ekstraksi data otomatis dari foto struk belanja.", 
+      en: "Smart receipt management application with AI features (Gemini) for automatic data extraction from receipt photos." 
+    },
+    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864916/Screenshot_2026-04-22_192044_soehzw.png",
+    screenshots: [
+      "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864916/Screenshot_2026-04-22_192044_soehzw.png",
+      "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864914/Screenshot_2026-04-22_191957_qkch2g.png"
+    ],
+    demo: "https://smart-receipt-gamma.vercel.app/",
+    github: "https://github.com/arliannasrul/Smart-Receipt",
+    techStack: ["html", "css", "react", "tailwind", "next", "gemini", "googleCloud"],
   },
 ];
+
 export default portfolioItems;

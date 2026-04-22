@@ -18,41 +18,41 @@ import Link from "next/link";
 export default function Home() {
    const { t } = useLanguage();
    const items = [
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1751977214/Screenshot_310_pe9dud.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864916/Screenshot_2026-04-22_192044_soehzw.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864915/Screenshot_2026-04-22_191734_gorsxp.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864913/Screenshot_2026-04-22_192229_mmpaul.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864914/Screenshot_2026-04-22_191957_qkch2g.png",
 
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1751978601/Screenshot_311_j0tpac.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864915/Screenshot_2026-04-22_191734_gorsxp.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864916/Screenshot_2026-04-22_192044_soehzw.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864919/Screenshot_2026-04-22_203414_n08jbk.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864921/Screenshot_2026-04-22_203254_hbudrm.png",
 
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1751977214/Screenshot_310_pe9dud.png",
-   
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
+        "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864916/Screenshot_2026-04-22_192044_soehzw.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864915/Screenshot_2026-04-22_191734_gorsxp.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864913/Screenshot_2026-04-22_192229_mmpaul.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864914/Screenshot_2026-04-22_191957_qkch2g.png",
 
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1751977214/Screenshot_310_pe9dud.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864915/Screenshot_2026-04-22_191734_gorsxp.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864916/Screenshot_2026-04-22_192044_soehzw.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864919/Screenshot_2026-04-22_203414_n08jbk.png",
+    
 
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1751978601/Screenshot_311_j0tpac.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
+        "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864916/Screenshot_2026-04-22_192044_soehzw.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864915/Screenshot_2026-04-22_191734_gorsxp.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864921/Screenshot_2026-04-22_203254_hbudrm.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864914/Screenshot_2026-04-22_191957_qkch2g.png",
 
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1751977214/Screenshot_310_pe9dud.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
-
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1751978601/Screenshot_311_j0tpac.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
-    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864915/Screenshot_2026-04-22_191734_gorsxp.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864916/Screenshot_2026-04-22_192044_soehzw.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864919/Screenshot_2026-04-22_203414_n08jbk.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864921/Screenshot_2026-04-22_203254_hbudrm.png",
+    
+    
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864916/Screenshot_2026-04-22_192044_soehzw.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864915/Screenshot_2026-04-22_191734_gorsxp.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864913/Screenshot_2026-04-22_192229_mmpaul.png",
+    "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864914/Screenshot_2026-04-22_191957_qkch2g.png",
 
     // Add more items as needed
   ];

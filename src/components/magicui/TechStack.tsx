@@ -141,20 +141,20 @@ export default function AnimatedBeamDemo() {
         <div className="flex flex-row  items-center lg:justify-between justify-center gap-13 sm:gap-20 md:gap-34 lg:gap-40">
           <Circle ref={div3Ref} className={`${visible ? "opacity-100" : "opacity-0"} transition-opacity duration-2000  delay-1200`}>
             <a
-              href="https://astro.build/"
+              href="https://ai.google.dev/gemini-api/docs?hl=id#javascript"
               target="_blank"
               className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0"
             >
-              <Icons.astro />
+              <Icons.gemini />
             </a>
           </Circle>
           <Circle ref={div7Ref} className={`${visible ? "opacity-100" : "opacity-0"} transition-opacity duration-2000  delay-1400`}>
             <a
-              href="https://vitejs.dev/"
+              href="https://cloud.google.com/"
               target="_blank"
               className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0"
             >
-              <Icons.vite />
+              <Icons.googleCloud />
             </a>
           </Circle>
           <Circle ref={div8Ref} className={`${visible ? "opacity-100" : "opacity-0"} transition-opacity duration-2000  delay-1600`}>
