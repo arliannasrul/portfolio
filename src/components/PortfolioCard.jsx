@@ -96,7 +96,7 @@ const PortfolioCard = ({ item }) => {
             onClick={() => setIsPreviewOpen(true)}
           >
             {item.screenshots ? (
-              item.screenshots.map((src, index) => (
+              item.screenshots.map((shot, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0 }}
@@ -105,7 +105,7 @@ const PortfolioCard = ({ item }) => {
                   }}
                   transition={{ duration: 1, ease: "easeInOut" }}
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                  style={{ backgroundImage: `url(${src})` }}
+                  style={{ backgroundImage: `url(${shot.url})` }}
                 />
               ))
             ) : (
@@ -199,62 +199,114 @@ const PortfolioCard = ({ item }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-md p-4 md:p-10"
+            className="fixed inset-0 z-[100] flex items-start justify-center bg-black/95 backdrop-blur-md p-4 md:p-10 overflow-y-auto py-20"
             onClick={() => setIsPreviewOpen(false)}
           >
             <motion.div
-              key={currentImgIndex}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
-              className="relative max-w-6xl w-full h-auto max-h-full flex items-center justify-center"
+              className="relative max-w-5xl w-full h-auto flex flex-col items-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <img 
-                src={item.screenshots ? item.screenshots[currentImgIndex] : item.image} 
-                alt={item.title.id}
-                className="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl border border-white/10"
-              />
-              
-              {/* Navigation Buttons */}
-              {item.screenshots && item.screenshots.length > 1 && (
-                <>
-                  <button 
-                    className="absolute left-0 md:-left-16 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all backdrop-blur-md border border-white/10 active:scale-90"
-                    onClick={handlePrev}
-                  >
-                    <ChevronLeft size={32} />
-                  </button>
-                  <button 
-                    className="absolute right-0 md:-right-16 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all backdrop-blur-md border border-white/10 active:scale-90"
-                    onClick={handleNext}
-                  >
-                    <ChevronRight size={32} />
-                  </button>
-                </>
-              )}
-
               {/* Close Button */}
               <button 
-                className="absolute -top-12 right-0 md:-top-10 md:-right-10 p-2 bg-white/10 hover:bg-red-500/80 text-white rounded-full transition-all backdrop-blur-md border border-white/10"
+                className="absolute -top-12 right-0 md:-top-12 md:-right-0 p-3 bg-white/10 hover:bg-red-500/80 text-white rounded-full transition-all backdrop-blur-md border border-white/10 z-50"
                 onClick={() => setIsPreviewOpen(false)}
               >
                 <X size={24} />
               </button>
 
-              {/* Title Overlay in Modal */}
-              <div className="absolute -bottom-16 left-0 right-0 text-center text-white">
-                <h3 className="text-xl font-bold mb-1">{item.title[lang] || item.title.id}</h3>
-                <div className="flex justify-center gap-1.5 mt-2">
-                  {item.screenshots?.map((_, i) => (
-                    <div 
-                      key={i} 
-                      className={`h-1.5 rounded-full transition-all duration-300 ${
-                        currentImgIndex === i ? "w-8 bg-[#6497B1]" : "w-2 bg-white/30"
-                      }`}
+              <div className="flex flex-col items-center w-full">
+                {/* Main Image Display with Animation */}
+                <div className="relative w-full flex items-center justify-center min-h-[400px] md:min-h-[500px]">
+                  <AnimatePresence mode="wait">
+                    <motion.img 
+                      key={currentImgIndex}
+                      src={item.screenshots ? item.screenshots[currentImgIndex].url : item.image} 
+                      alt={item.title.id}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -20 }}
+                      transition={{ duration: 0.4, ease: "easeInOut" }}
+                      className="max-w-full max-h-[75vh] object-contain rounded-xl shadow-2xl border border-white/10"
                     />
-                  ))}
+                  </AnimatePresence>
+                  
+                  {/* Navigation Buttons */}
+                  {item.screenshots && item.screenshots.length > 1 && (
+                    <>
+                      <button 
+                        className="absolute left-2 md:-left-20 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all backdrop-blur-md border border-white/10 active:scale-90"
+                        onClick={handlePrev}
+                      >
+                        <ChevronLeft size={32} />
+                      </button>
+                      <button 
+                        className="absolute right-2 md:-right-20 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all backdrop-blur-md border border-white/10 active:scale-90"
+                        onClick={handleNext}
+                      >
+                        <ChevronRight size={32} />
+                      </button>
+                    </>
+                  )}
+                </div>
+
+                {/* Info Panel Below Image */}
+                <div className="mt-12 text-center max-w-4xl w-full px-4 md:px-0">
+                  <motion.h3 
+                    className="text-2xl md:text-4xl font-bold text-white mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400"
+                  >
+                    {item.title[lang] || item.title.id}
+                  </motion.h3>
+                  
+                  <div className="grid md:grid-cols-5 gap-6 text-left">
+                    {/* General Overview */}
+                    <div className="md:col-span-2 p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 flex flex-col">
+                      <p className="text-gray-400 text-xs uppercase tracking-widest mb-3 font-semibold">Project Overview</p>
+                      <p className="text-gray-200 text-sm md:text-base leading-relaxed">
+                        {item.fullDescription?.[lang] || item.fullDescription?.id}
+                      </p>
+                    </div>
+
+                    {/* Screenshot-Specific Context (Dynamic) */}
+                    <div className="md:col-span-3">
+                      <AnimatePresence mode="wait">
+                        {item.screenshots && item.screenshots[currentImgIndex]?.info && (
+                          <motion.div 
+                            key={currentImgIndex}
+                            initial={{ opacity: 0, y: 15 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -15 }}
+                            transition={{ duration: 0.4 }}
+                            className="h-full p-6 bg-[#6497B1]/10 backdrop-blur-md rounded-2xl border border-[#6497B1]/20 shadow-xl flex flex-col"
+                          >
+                            <div className="flex items-center gap-2 mb-3">
+                              <div className="w-2 h-2 rounded-full bg-[#6497B1] animate-pulse" />
+                              <p className="text-[#6497B1] text-xs uppercase tracking-widest font-bold">Screenshot Highlight</p>
+                            </div>
+                            <p className="text-white text-base md:text-xl leading-relaxed font-medium">
+                              {item.screenshots[currentImgIndex].info[lang] || item.screenshots[currentImgIndex].info.id}
+                            </p>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  </div>
+                  
+                  {/* Indicators / Thumbnails area */}
+                  <div className="flex justify-center gap-3 mt-12 mb-8">
+                    {item.screenshots?.map((_, i) => (
+                      <button 
+                        key={i} 
+                        onClick={() => setCurrentImgIndex(i)}
+                        className={`h-2 rounded-full transition-all duration-500 ${
+                          currentImgIndex === i ? "w-16 bg-[#6497B1]" : "w-4 bg-white/10 hover:bg-white/30"
+                        }`}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -266,3 +318,4 @@ const PortfolioCard = ({ item }) => {
 };
 
 export default PortfolioCard;
+
