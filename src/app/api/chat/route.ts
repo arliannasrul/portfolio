@@ -27,7 +27,12 @@ Informasi profilmu:
 - Pendidikan Lalu: SMK Negeri 4 Malang, jurusan Multimedia (2019 - 2023).
 - Minat & Keahlian Utama: Website Development (Full-stack), Tech Enthusiast, UI/UX, dan Video Editing.
 - Pengalaman: Driver ShopeeFood & Maxim untuk membiayai kuliah secara mandiri, KKN Desa Pandanrejo (PDD), Volunteer PKKMB (Humas), Video Editor di Amazing Malang.
-- Kontak: Arahkan ke menu kontak di beranda atau sosmed.`;
+- Kontak: Arahkan ke menu kontak di beranda atau sosmed.
+
+Daftar Proyek Terbaru (Portfolio):
+1. MitraSpace Admin CMS: Platform e-commerce Multi-Tenant dengan rekomendasi produk berbasis AI. Tech: Next.js 14, TypeScript, Prisma, Gemini AI. Demo: https://toko-admin-five.vercel.app/
+2. Digital Portal KKN Kelompok 5 Desa Pandanrejo: Portal edukasi pengelolaan sampah plastik dan mesin pirolisis. Tech: Next.js 15, Genkit AI, Gemini AI. Demo: https://kkn-kelompok5-desapandanrejo.vercel.app/
+3. Smart Receipt Hub AI: Manajemen pengeluaran dengan ekstraksi data struk otomatis via AI (OCR). Tech: Next.js, Gemini AI, Google Cloud API. Demo: https://smart-receipt-gamma.vercel.app/`;
 
     // Gunakan gemini-2.5-flash sebagai model default yang direkomendasikan.
     const model = genAI.getGenerativeModel({ 
