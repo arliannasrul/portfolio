@@ -1,16 +1,22 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLanguage } from "../app/LanguageContext";
 import SplitText from "./SplitText/SplitText";
 import AnimatedContent from "./AnimatedContent/AnimatedContent";
 import certificates, { driveLink } from "../assets/data/certificates";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ZoomIn, ChevronLeft, ChevronRight } from "lucide-react";
+import { createPortal } from "react-dom";
 
 const Certificates = () => {
   const { t } = useLanguage();
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedCert, setSelectedCert] = useState(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const nextSlide = () => {
     setActiveIndex((prev) => (prev + 1) % certificates.length);
@@ -128,37 +134,41 @@ const Certificates = () => {
       </div>
 
       {/* Lightbox */}
-      <AnimatePresence>
-        {selectedCert && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-md p-4"
-            onClick={() => setSelectedCert(null)}
-          >
+      {mounted && createPortal(
+        <AnimatePresence>
+          {selectedCert && (
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="relative max-w-6xl w-full flex flex-col items-center"
-              onClick={(e) => e.stopPropagation()}
+              key="certificate-lightbox"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 backdrop-blur-md p-4"
+              onClick={() => setSelectedCert(null)}
             >
-              <button 
-                className="absolute -top-14 right-0 p-3 text-white hover:text-red-500 transition-colors"
-                onClick={() => setSelectedCert(null)}
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                className="relative max-w-6xl w-full flex flex-col items-center"
+                onClick={(e) => e.stopPropagation()}
               >
-                <X size={36} />
-              </button>
-              <img 
-                src={selectedCert.image} 
-                alt={selectedCert.title} 
-                className="max-w-full max-h-[90vh] rounded-lg shadow-2xl border border-white/10 object-contain"
-              />
+                <button 
+                  className="absolute -top-14 right-0 p-3 text-white hover:text-red-500 transition-colors"
+                  onClick={() => setSelectedCert(null)}
+                >
+                  <X size={36} />
+                </button>
+                <img 
+                  src={selectedCert.image} 
+                  alt={selectedCert.title} 
+                  className="max-w-full max-h-[90vh] rounded-lg shadow-2xl border border-white/10 object-contain"
+                />
+              </motion.div>
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </section>
   );
 };
