@@ -109,6 +109,9 @@ const translations: Record<'id' | 'en', Record<string, string>> = {
     'Gagal memuat lagu:': 'Gagal memuat lagu:',
     'Sembunyikan Playlist': 'Sembunyikan Playlist',
     'Tampilkan Playlist': 'Tampilkan Playlist',
+    'Sertifikat & Penghargaan': 'Sertifikat & Penghargaan',
+    'Beberapa sertifikasi dan pelatihan yang telah saya selesaikan untuk menunjang keahlian profesional saya.': 'Beberapa sertifikasi dan pelatihan yang telah saya selesaikan untuk menunjang keahlian profesional saya.',
+    'Lihat Semua Sertifikat': 'Lihat Semua Sertifikat',
   },
   en: {
     // Navbar
@@ -201,6 +204,9 @@ const translations: Record<'id' | 'en', Record<string, string>> = {
     'Gagal memuat lagu:': 'Failed to load song:',
     'Sembunyikan Playlist': 'Hide Playlist',
     'Tampilkan Playlist': 'Show Playlist',
+    'Sertifikat & Penghargaan': 'Certificates & Awards',
+    'Beberapa sertifikasi dan pelatihan yang telah saya selesaikan untuk menunjang keahlian profesional saya.': 'Several certifications and trainings I have completed to support my professional expertise.',
+    'Lihat Semua Sertifikat': 'View All Certificates',
   }
 };
 

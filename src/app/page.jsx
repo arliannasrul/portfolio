@@ -10,6 +10,7 @@ import BlurText from "@/components/BlurText/BlurText";
 import FadeContent from "@/animations/FadeContent/FadeContent";
 import TimelineTabs from "@/components/TimelineTabs";
 import AnimatedBeamDemo from "@/components/magicui/TechStack";
+import Certificates from "@/components/Certificates";
 import GridMotion from "@/components/GridMotion/GridMotion";
 import Link from "next/link";
 
@@ -55,6 +56,11 @@ export default function Home() {
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864914/Screenshot_2026-04-22_191957_qkch2g.png",
 
     // Add more items as needed
+
+   
+
+    
+    
   ];
   return (
     <>
@@ -168,7 +174,7 @@ export default function Home() {
                 >
                   <a
                     className="flex mt-2 lg:mt-2 "
-                    href="https://drive.google.com/file/d/1XjOxSC69KsTTB_SmNEYwO09QM397Ckz-/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1u2RggWm9nWOfm3jtlJGpo6DIGSSzmLhJ/view?usp=sharing"
                     target="_blank"
                   >
                     <Magnet padding={50} disabled={false} magnetStrength={2}>
@@ -431,6 +437,8 @@ export default function Home() {
      
           
         </section>
+
+        <Certificates />
 
                <section id="portfolio" className="  pb-12  text-center bg-white dark:bg-slate-900">
           <div className=""></div>
