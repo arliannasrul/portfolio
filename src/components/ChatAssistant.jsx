@@ -69,7 +69,7 @@ export default function ChatAssistant() {
         ...prev,
         {
           role: "model",
-          content: lang === 'id' ? "Maaf, terjadi kesalahan saat menghubungi AI. Pastikan API key kamu sudah benar dan koneksi internet stabil." : "Sorry, an error occurred while connecting to the AI. Please make sure the API key is correct and your internet connection is stable.",
+          content: error.message || (lang === 'id' ? "Maaf, terjadi kesalahan saat menghubungi AI. Coba lagi nanti ya!" : "Sorry, an error occurred while connecting to the AI. Please try again later!"),
         },
       ]);
     } finally {

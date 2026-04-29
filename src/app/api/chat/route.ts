@@ -65,12 +65,54 @@ Daftar Proyek Terbaru (Portfolio):
         ],
     });
 
-    const result = await chat.sendMessage(latestMessage);
+    // Implement retry logic for transient errors (503 Service Unavailable, 429 Too Many Requests)
+    const sendMessageWithRetry = async (message: string, maxRetries = 3) => {
+      for (let i = 0; i < maxRetries; i++) {
+        try {
+          return await chat.sendMessage(message);
+        } catch (error: any) {
+          const isTransientError = 
+            error?.status === 503 || 
+            error?.status === 429 || 
+            error?.message?.includes("503") || 
+            error?.message?.includes("429") ||
+            error?.message?.includes("Service Unavailable") ||
+            error?.message?.includes("Too Many Requests");
+
+          if (isTransientError && i < maxRetries - 1) {
+            const delay = Math.pow(2, i) * 1000;
+            console.warn(`Gemini API transient error (attempt ${i + 1}/${maxRetries}):`, error.message);
+            console.warn(`Retrying in ${delay}ms...`);
+            await new Promise(resolve => setTimeout(resolve, delay));
+            continue;
+          }
+          throw error;
+        }
+      }
+    };
+
+    const result = await sendMessageWithRetry(latestMessage);
+    if (!result) throw new Error("No response from AI");
+    
     const responseText = result.response.text();
 
     return NextResponse.json({ reply: responseText });
   } catch (error: any) {
-    console.error("Gemini API Error:", error);
-    return NextResponse.json({ error: "Terjadi kesalahan pada AI Assistant. Pastikan API Key valid atau coba lagi nanti." }, { status: 500 });
+    console.error("Gemini API Error Detail:", {
+      message: error.message,
+      status: error.status,
+      stack: error.stack
+    });
+    
+    const isOverloaded = error?.message?.includes("503") || error?.status === 503;
+    
+    return NextResponse.json(
+      { 
+        error: isOverloaded 
+          ? "Server AI sedang sibuk (Error 503). Silakan coba lagi dalam beberapa detik." 
+          : "Terjadi kesalahan pada AI Assistant. Coba lagi nanti ya!" 
+      }, 
+      { status: error?.status || 500 }
+    );
   }
 }
