@@ -64,9 +64,9 @@ export default function Home() {
   ];
   return (
     <>
-      <section id="home" className="flex justify-center lg:px-18 bg-white dark:bg-slate-900 transition-colors pt-12 lg:pt-0">
+      <section id="home" className="flex justify-center lg:px-18 bg-white dark:bg-slate-900 transition-colors pt-12 lg:pt-0 overflow-visible">
           <div className="container">
-            <div className="flex flex-wrap ">
+            <div className="flex flex-wrap overflow-visible ">
               <div className=" w-full self-center px-4 lg:w-1/2 pt-26 lg:pt-0 pb-6 lg:pl-16">
                 <div className="  text-base   gap-2 font-semibold md:text-xl">
                   <div className=" -mb-7 pb-1 lg:pb-2">
@@ -187,7 +187,7 @@ export default function Home() {
                   </a>
                 </AnimatedContent>
               </div>
-              <div className=" items-center translate-x-1/16 lg:translate-x-0 w-full h-[87vh]  scale-85 lg:scale-100 lg:h-full  -top-15 lg:w-1/2 relative z-0  ">
+              <div className=" items-center translate-x-1/16 lg:translate-x-0 w-full h-[87vh]  scale-85 lg:scale-100 lg:h-full  -top-15 lg:w-1/2 relative z-0 overflow-visible  ">
                <div className="dark:hidden ">
                   <Lanyard position={[0, 0, 19]} gravity={[0, -40, 0]} />
                 </div>

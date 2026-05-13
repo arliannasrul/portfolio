@@ -57,7 +57,7 @@ export default function Lanyard({
 
   return (
     <div
-      className="relative h-screen w-full flex justify-center items-center transform scale-100 origin-top pb-32 lg:pb-0"
+      className="relative h-screen w-full lg:h-[140vh] lg:-mt-[20vh] lg:-mb-[20vh] lg:w-[400%] lg:-translate-x-[37.5%] flex justify-center items-center transform scale-100 origin-top pb-32 lg:pb-0"
       onClick={isSmall ? handleDoubleTap : undefined}
     >
       {isSmall && (
@@ -72,7 +72,7 @@ export default function Lanyard({
       )}
 
       <Canvas
-        camera={{ position: position, fov: fov }}
+        camera={{ position: position, fov: isSmall ? fov : fov * 1.4 }}
         gl={{ alpha: transparent }}
         onCreated={({ gl }) =>
           gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1)
@@ -137,6 +137,8 @@ function Band({
     ang = new THREE.Vector3(),
     rot = new THREE.Vector3(),
     dir = new THREE.Vector3();
+  const rotQuat = new THREE.Quaternion();
+  const euler = new THREE.Euler();
   const segmentProps = {
     type: "dynamic",
     canSleep: true,
@@ -213,13 +215,17 @@ function Band({
       curve.points[3].copy(fixed.current.translation());
       band.current.geometry.setPoints(curve.getPoints(32));
       ang.copy(card.current.angvel());
-      rot.copy(card.current.rotation());
-      const targetRotation = isFlipped ? Math.PI : 0;
-      const currentRotation = rot.y;
-      const rotationStep = (targetRotation - currentRotation) * 0.1;
+      const rawRot = card.current.rotation();
+      rotQuat.set(rawRot.x, rawRot.y, rawRot.z, rawRot.w);
+      euler.setFromQuaternion(rotQuat, 'YXZ');
+      const targetY = isFlipped ? Math.PI : 0;
+      let diff = targetY - euler.y;
+      // Normalisasi ke [-PI, PI] agar selalu putar jalur terpendek
+      diff = ((diff + Math.PI) % (2 * Math.PI)) - Math.PI;
+      const rotationStep = diff * 0.3;
       card.current.setAngvel({
         x: ang.x,
-        y: ang.y - rot.y * 0.2 + rotationStep,
+        y: ang.y * 0.85 + rotationStep,
         z: ang.z,
       });
     }
@@ -325,7 +331,7 @@ function Band({
           useMap
           map={texture}
           repeat={[-4, 1]}
-          lineWidth={1}
+          lineWidth={isSmall ? 1 : 0.25}
         />
       </mesh>
     </>
