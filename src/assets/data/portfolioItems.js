@@ -28,7 +28,7 @@ const portfolioItems = [
       }
     ],
     image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864915/Screenshot_2026-04-22_191734_gorsxp.png",
-    demo: "https://toko-admin-five.vercel.app/",
+    demo: "https://mitraspace.arliannasrul.my.id",
     github: "https://github.com/arliannasrul/toko-admin", 
     techStack: ["html", "css", "react", "tailwind", "next", "googleCloud", "gemini"],
   },
@@ -60,7 +60,7 @@ const portfolioItems = [
       }
     ],
     image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864919/Screenshot_2026-04-22_203414_n08jbk.png",
-    demo: "https://kkn-kelompok5-desapandanrejo.vercel.app/",
+    demo: "https://kkn.arliannasrul.my.id",
     github: "https://github.com/arliannasrul/kkn-kelompok5-desapandanrejo",
     techStack: ["html", "css", "react", "tailwind", "next", "gemini"],
   },
@@ -92,7 +92,7 @@ const portfolioItems = [
       }
     ],
     image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864916/Screenshot_2026-04-22_192044_soehzw.png",
-    demo: "https://smart-receipt-gamma.vercel.app/",
+    demo: "https://smartreceipt.arliannasrul.my.id",
     github: "https://github.com/arliannasrul/Smart-Receipt",
     techStack: ["html", "css", "react", "tailwind", "next", "gemini", "googleCloud"],
   },
