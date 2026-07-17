@@ -96,6 +96,52 @@ const portfolioItems = [
     github: "https://github.com/arliannasrul/Smart-Receipt",
     techStack: ["html", "css", "react", "tailwind", "next", "gemini", "googleCloud"],
   },
+  {
+    id: 4,
+    title: { id: "MitraSpace v2 Admin CMS", en: "MitraSpace v2 " },
+    description: {
+      id: "Dashboard admin e-commerce premium terintegrasi Payment Gateway, Ekspedisi real-time, CRM, & RBAC.",
+      en: "Premium e-commerce admin dashboard integrated with Payment Gateway, real-time Shipping API, CRM, & RBAC.",
+    },
+    fullDescription: {
+      id: "MitraSpace Seller Center adalah dashboard administrasi e-commerce full-stack berbasis Laravel yang dirancang untuk mengelola inventaris, memproses order penjualan, melacak ekspedisi secara real-time, dan mengelola hubungan pelanggan (CRM). Fitur unggulan mencakup: integrasi Doku Payment Gateway untuk sinkronisasi status pembayaran otomatis, integrasi API KiriminAja untuk cek ongkir & generate nomor resi AWB, cetak label pengiriman dengan barcode dinamis, sistem Role-Based Access Control (RBAC) dengan 4 level hak akses, Login Google OAuth, serta navigasi SPA-like (PJAX) tanpa full page reload. Sistem ini terhubung langsung dengan MitraSpace Buyer Store melalui REST API publik.",
+      en: "MitraSpace Seller Center is a full-stack Laravel-based e-commerce administration dashboard designed to manage inventory, process sales orders, track shipments in real-time, and handle customer relationships (CRM). Key features include: Doku Payment Gateway integration for automatic payment status sync, KiriminAja API for shipping rates & AWB generation, airway bill printing with dynamic barcodes, a Role-Based Access Control (RBAC) system with 4 access levels, Google OAuth login, and SPA-like navigation (PJAX) without full page reloads. This system is directly connected to the MitraSpace Buyer Store via a public REST API.",
+    },
+screenshots: [
+      {
+        url: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1784285743/Screenshot_2026-07-17_17291822_ooizcg.png",
+        info: {
+          id: "Seller Center Dashboard: Menampilkan ringkasan matriks bisnis secara real-time seperti total pendapatan, nilai inventaris, peringatan stok rendah, serta log aktivitas keluar-masuk barang yang tersinkronisasi via API.",
+          en: "Seller Center Dashboard: Displays real-time business matrix summaries such as total revenue, inventory value, low stock alerts, and inbound/outbound activity logs synced via API."
+        }
+      },
+      {
+        url: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1784285743/Screenshot_2026-07-17_17294122_xvn5zh.png",
+        info: {
+          id: "Manajemen Order & Logistik: Memantau pesanan pelanggan dari status baru hingga selesai. Terintegrasi penuh dengan layanan ekspedisi (seperti KiriminAja) untuk pembuatan dan pelacakan nomor resi (AWB) secara otomatis.",
+          en: "Order & Logistics Management: Monitors customer orders from new to completed statuses. Fully integrated with shipping services (like KiriminAja) for automated airway bill (AWB) generation and tracking."
+        }
+      },
+      {
+        url: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1784285743/Screenshot_2026-07-17_16571722_vzlaaa.png",
+        info: {
+          id: "Buyer Store Front-End: Halaman utama toko (Buyer Store) dengan antarmuka (UI/UX) yang modern, bersih, dan responsif. Menyoroti fitur pelacakan pesanan mandiri dan jaminan pembayaran aman via DOKU.",
+          en: "Buyer Store Front-End: The main store page (Buyer Store) featuring a modern, clean, and responsive UI/UX. Highlights self-service order tracking features and secure payment guarantees via DOKU."
+        }
+      },
+      {
+        url: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1784285744/Screenshot_2026-07-17_17000922_go0xsw.png",
+        info: {
+          id: "Katalog Produk Interaktif: Etalase pembeli yang menampilkan filter kategori dinamis, indikator sisa stok yang ditarik secara langsung (real-time) dari server, dan fungsi keranjang belanja yang cepat.",
+          en: "Interactive Product Catalog: Buyer storefront displaying dynamic category filters, real-time remaining stock indicators pulled directly from the server, and quick shopping cart functionality."
+        }
+      }
+    ],
+    image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864913/Screenshot_2026-04-22_192229_mmpaul.png",
+    demo: "https://disgrace-quality-dress.ngrok-free.dev",
+    github: "https://github.com/arliannasrul/inventory-admin",
+    techStack: ["html", "css", "php", "laravel", "mysql", "javascript"],
+  },
 ];
 
 export default portfolioItems;
