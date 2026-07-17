@@ -109,14 +109,14 @@ const portfolioItems = [
     },
 screenshots: [
       {
-        url: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1784285743/Screenshot_2026-07-17_17291822_ooizcg.png",
+        url: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1784287380/Screenshot_2026-07-17_18205722_tygpam.png",
         info: {
           id: "Seller Center Dashboard: Menampilkan ringkasan matriks bisnis secara real-time seperti total pendapatan, nilai inventaris, peringatan stok rendah, serta log aktivitas keluar-masuk barang yang tersinkronisasi via API.",
           en: "Seller Center Dashboard: Displays real-time business matrix summaries such as total revenue, inventory value, low stock alerts, and inbound/outbound activity logs synced via API."
         }
       },
       {
-        url: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1784285743/Screenshot_2026-07-17_17294122_xvn5zh.png",
+        url: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1784287381/Screenshot_2026-07-17_18222522_r4xu4k.png",
         info: {
           id: "Manajemen Order & Logistik: Memantau pesanan pelanggan dari status baru hingga selesai. Terintegrasi penuh dengan layanan ekspedisi (seperti KiriminAja) untuk pembuatan dan pelacakan nomor resi (AWB) secara otomatis.",
           en: "Order & Logistics Management: Monitors customer orders from new to completed statuses. Fully integrated with shipping services (like KiriminAja) for automated airway bill (AWB) generation and tracking."
