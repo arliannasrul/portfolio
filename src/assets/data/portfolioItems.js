@@ -138,7 +138,7 @@ screenshots: [
       }
     ],
     image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864913/Screenshot_2026-04-22_192229_mmpaul.png",
-    demo: "https://disgrace-quality-dress.ngrok-free.dev",
+    demo: "http://mitraspace-admin.vercel.app",
     github: "https://github.com/arliannasrul/inventory-admin",
     techStack: ["html", "css", "php", "laravel", "mysql", "javascript"],
   },
