@@ -30,7 +30,7 @@ const portfolioItems = [
     image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864915/Screenshot_2026-04-22_191734_gorsxp.png",
     demo: "https://mitraspace.arliannasrul.my.id",
     github: "https://github.com/arliannasrul/toko-admin", 
-    techStack: ["html", "css", "react", "tailwind", "next", "googleCloud", "gemini"],
+    techStack: ["html", "css", "react", "tailwind", "next", "gemini", "prisma", "neon"],
   },
   {
     id: 2,
@@ -98,7 +98,7 @@ const portfolioItems = [
   },
   {
     id: 4,
-    title: { id: "MitraSpace v2 Admin CMS", en: "MitraSpace v2 " },
+    title: { id: "MitraSpace v2", en: "MitraSpace v2 " },
     description: {
       id: "Dashboard admin e-commerce premium terintegrasi Payment Gateway, Ekspedisi real-time, CRM, & RBAC.",
       en: "Premium e-commerce admin dashboard integrated with Payment Gateway, real-time Shipping API, CRM, & RBAC.",
@@ -118,14 +118,14 @@ screenshots: [
       {
         url: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1784287381/Screenshot_2026-07-17_18222522_r4xu4k.png",
         info: {
-          id: "Manajemen Order & Logistik: Memantau pesanan pelanggan dari status baru hingga selesai. Terintegrasi penuh dengan layanan ekspedisi (seperti KiriminAja) untuk pembuatan dan pelacakan nomor resi (AWB) secara otomatis.",
+          id: "Manajemen Order & Logistik: Memantau pesanan pelanggan dari status baru hingga selesai. ",
           en: "Order & Logistics Management: Monitors customer orders from new to completed statuses. Fully integrated with shipping services (like KiriminAja) for automated airway bill (AWB) generation and tracking."
         }
       },
       {
         url: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1784285743/Screenshot_2026-07-17_16571722_vzlaaa.png",
         info: {
-          id: "Buyer Store Front-End: Halaman utama toko (Buyer Store) dengan antarmuka (UI/UX) yang modern, bersih, dan responsif. Menyoroti fitur pelacakan pesanan mandiri dan jaminan pembayaran aman via DOKU.",
+          id: "Buyer Store Front-End: Halaman utama toko (Buyer Store) dengan antarmuka (UI/UX) yang modern, bersih, dan responsif. Menyoroti fitur pelacakan pesanan mandiri dan jaminan pembayaran aman via DOKU. Terintegrasi penuh dengan layanan ekspedisi raja ongkir untuk cek ongkir, pembuatan dan pelacakan nomor resi (AWB) secara otomatis.",
           en: "Buyer Store Front-End: The main store page (Buyer Store) featuring a modern, clean, and responsive UI/UX. Highlights self-service order tracking features and secure payment guarantees via DOKU."
         }
       },
@@ -140,7 +140,7 @@ screenshots: [
     image: "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1776864913/Screenshot_2026-04-22_192229_mmpaul.png",
     demo: "http://mitraspace-admin.vercel.app",
     github: "https://github.com/arliannasrul/inventory-admin",
-    techStack: ["html", "css", "php", "laravel", "mysql", "javascript"],
+    techStack: ["html", "css", "php", "laravel", "mysql","neon","doku","rajaongkir"],
   },
 ];
 
