@@ -86,7 +86,7 @@ export default function ChatAssistant() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="mb-4 w-[350px] max-w-[calc(100vw-3rem)] bg-base-100/90 backdrop-blur-md rounded-2xl shadow-2xl border border-white/10 overflow-hidden flex flex-col"
+            className="mb-4 w-[350px] max-w-[calc(100vw-3rem)] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md rounded-2xl shadow-2xl border border-black/10 dark:border-white/10 overflow-hidden flex flex-col"
             style={{ height: "450px", maxHeight: "calc(100vh - 8rem)" }}
           >
             {/* Header */}
@@ -119,7 +119,7 @@ export default function ChatAssistant() {
                 >
                   <div
                     className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center ${
-                      msg.role === "user" ? "bg-[#6497B1] text-white" : "bg-base-300 text-base-content"
+                      msg.role === "user" ? "bg-[#6497B1] text-white" : "bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200"
                     }`}
                   >
                     {msg.role === "user" ? <User size={14} /> : <Bot size={14} />}
@@ -128,7 +128,7 @@ export default function ChatAssistant() {
                     className={`px-3 py-2 rounded-2xl text-sm whitespace-pre-wrap ${
                       msg.role === "user"
                         ? "bg-[#6497B1] text-white rounded-tr-none"
-                        : "bg-base-200 text-base-content rounded-tl-none border border-base-300 shadow-sm"
+                        : "bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-tl-none border border-slate-200 dark:border-slate-700 shadow-sm"
                     }`}
                   >
                     {msg.content}
@@ -138,13 +138,13 @@ export default function ChatAssistant() {
               
               {isLoading && (
                 <div className="flex items-start gap-2 max-w-[85%] mr-auto">
-                   <div className="shrink-0 w-7 h-7 rounded-full flex items-center justify-center bg-base-300 text-base-content">
+                   <div className="shrink-0 w-7 h-7 rounded-full flex items-center justify-center bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200">
                     <Bot size={14} />
                   </div>
-                  <div className="px-3 py-3 rounded-2xl bg-base-200 text-base-content rounded-tl-none border border-base-300 shadow-sm flex items-center gap-1">
-                     <span className="w-1.5 h-1.5 rounded-full bg-base-content/50 animate-bounce"></span>
-                     <span className="w-1.5 h-1.5 rounded-full bg-base-content/50 animate-bounce" style={{ animationDelay: '0.2s' }}></span>
-                     <span className="w-1.5 h-1.5 rounded-full bg-base-content/50 animate-bounce" style={{ animationDelay: '0.4s' }}></span>
+                  <div className="px-3 py-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-tl-none border border-slate-200 dark:border-slate-700 shadow-sm flex items-center gap-1">
+                     <span className="w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-500 animate-bounce"></span>
+                     <span className="w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-500 animate-bounce" style={{ animationDelay: '0.2s' }}></span>
+                     <span className="w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-500 animate-bounce" style={{ animationDelay: '0.4s' }}></span>
                   </div>
                 </div>
               )}
@@ -152,8 +152,8 @@ export default function ChatAssistant() {
             </div>
 
             {/* Input Area */}
-            <form onSubmit={sendMessage} className="p-3 bg-base-200 border-t border-base-300">
-              <div className="flex items-center gap-2 bg-base-100 rounded-full pr-1 pl-3 py-1 shadow-inner border border-base-300 focus-within:border-[#6497B1]/50 text-white transition-colors">
+            <form onSubmit={sendMessage} className="p-3 bg-slate-100 dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700">
+              <div className="flex items-center gap-2 bg-white dark:bg-slate-900 rounded-full pr-1 pl-3 py-1 shadow-inner border border-slate-200 dark:border-slate-700 focus-within:border-[#6497B1]/50 text-slate-800 dark:text-white transition-colors">
                 <input
                   type="text"
                   value={input}
