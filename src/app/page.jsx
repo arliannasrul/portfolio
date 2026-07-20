@@ -15,6 +15,7 @@ import GridMotion from "@/components/GridMotion/GridMotion";
 import Link from "next/link";
 import SplashScreen from "@/components/SplashScreen";
 import CursorGrid from "@/components/CursorGrid";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -64,6 +65,7 @@ export default function Home() {
   return (
     <>
       <SplashScreen />
+      <ScrollProgress />
 
       {/* SECTION HERO-ABOUT (GABUNGAN HOME & ABOUT) */}
       <section
